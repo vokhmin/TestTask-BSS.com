@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds" debug="true">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%t] %-5p %c - %m%n</pattern>
+        </encoder>
+        <!--+
+            +
+        <encoder>
+              <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+            +-->
+    </appender>
+    
+    <logger name="org.dbunit" level="INFO" />
+    
+    <logger name="com.sun.xml" level="INFO" />
+    
+    <logger name="org.junit" level="DEBUG" />
+
+    <logger name="org.xmlunit" level="INFO" />
+
+    <logger name="org.springframework" level="INFO" />
+    
+    <logger name="org.h2" level="TRACE" />
+    
+    <logger name="org.myslq" level="INFO" />
+    
+    <logger name="org.hibernate" level="WARN" />
+
+    <logger name="org.hibernate.loader.Loader" level="INFO" />
+
+    <logger name="org.hibernate.tool.hbm2ddl" additivity="false" level="INFO" />
+
+    <logger name="org.hibernate.tool.hbm2ddl.SchemaUpdate" level="INFO" />
+    
+    <logger name="net.vokhmin" level="TRACE" />
+
+    <root level="TRACE">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
